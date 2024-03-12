@@ -4,56 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lovelace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Inter", sans-serif;
+            list-style: none;
+        }
+
         header {
-            border: 1px solid black;
+            border-bottom: 1px solid black;
+            height: 100px;
+            padding: 0px 160px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 24px;
+        }
+
+        #menu {
+            display: flex;
+            gap: 64px;
+        }
+
+        #menu button {
+            font-size: 24px;
+            padding: 8px;
+            border-radius: 6px;
+        }
+
+        #text_1 {
+            display: flex;
+            flex-direction: column;
+            width: 638px;
+            text-align: center;
+            gap: 64px;
         }
 
         main {
             border: 1px solid black;
-            padding: 10px;
+            padding: 140px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
 
         #info {
             border: 1px solid black;
-            padding: 10px;
+            width: 1095px;
         }
 
         #info > div {
             border: 1px solid black;
+            display: flex;
+            gap: 64px;
         }
 
         #gutenberg {
             border: 1px solid black;
+            width: 1095px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+            text-align: center;
         }
 
         iframe {
             margin: auto;
-            width: 70%;
-            height: 300px;
+            width: 95%;
+            height: 423px;
         }
     </style>
 </head>
 <body>
     <header>
         <p>Lovelace</p>
-        <ul>
+        <ul id="menu">
             <li><button id="">Para professores</button></li>
             <li><button id="">Sobre nós</button></li>
             <li><button id="">Login</button></li>
         </ul>
     </header>
     <main>
-        <div>
+        <div id="text_1">
             <h1>Melhore suas habilidades de leitura em inglês! Experimente agora!</h1>
             <p>Descubra como Lovelace pode transformar sua maneira de aprende inglês. Teste agora mesmo e veja a diferença por si mesmo!</p>
             <button>Comece a usar</button>
-        </div>
-        <div>
-            <img src="#" alt="Img_result">
+            <img src="" alt="Img_result">
         </div>
         <div id="info">
-            <img src="#" alt="Img_decoration">
+            <img src="" alt="Img_decoration">
             <div>
                 <img src="#" alt="Img_decoration">
                 <p>Utilizamos tecnologia de ponta e design moderno para tornar o aprendizado mais interessante, envolvente e adaptado às necessidades individuais. Comprometidos em oferecer uma educação de qualidade.</p>
