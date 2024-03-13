@@ -7,6 +7,7 @@
 
 :root {
     --color1: #F21B3F;
+    --color2: #1D2F6F;
 }
 
 button:hover {
@@ -18,7 +19,7 @@ header {
     border-bottom: 1px solid black;
 }
 
-#header {
+#nav {
     margin: auto;
     height: 100px;
     padding: 0px 160px;
@@ -29,7 +30,7 @@ header {
     max-width: 1440px;
 }
 
-header button {
+nav button {
     background-color: white;
     border: none;
 }
@@ -50,12 +51,69 @@ header button {
     border-radius: 6px;
 }
 
+#form_1 {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    z-index: -2;
+}
+
+#form_2 {
+    position: absolute;
+    top: 1100px;
+    right: 0;
+    z-index: -2;
+}
+
+#form_3 {
+    position: absolute;
+    top: 2400px;
+    left: 0;
+    z-index: -2;
+}
+
+#grad_1 {
+    position: absolute;
+    top: 0px;
+    background-image: radial-gradient(circle, var(--color1) -200%,  transparent 72%);
+    width: 700px;
+    height: 700px;
+    z-index: -3;
+}
+
+#grad_2 {
+    position: absolute;
+    top: 1600px;
+    right: 0;
+    width: 800px;
+    height: 800px;
+    z-index: -3;
+}
+
+#grad_3 {
+    position: absolute;
+    top: 2200px;
+    left: 0;
+    width: 800px;
+    height: 800px;
+    z-index: -3;
+}
+
+#grad_4 {
+    position: absolute;
+    top: 1900px;
+    width: 800px;
+    height: 800px;
+    z-index: -3;
+}
+
 main {
     padding: 140px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 #text_main {
@@ -94,22 +152,15 @@ main {
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin: 210px;
+    margin: 20px 180px;
 }
 
-#elem1 {
-    position: absolute;
-    top: -40%;
-    z-index: -1;
-}
-
-#elem2 {
-    position: absolute;
-    bottom:-40%;
+.elem1 {
+    width: 52%;
 }
 
 #info {
-    width: 1095px;
+    max-width: 1095px;
 }
 
 .text_info {
@@ -122,7 +173,7 @@ main {
 }
 
 .text_info p {
-    width: 831px;
+    max-width: 831px;
 }
 
 #gutenberg {

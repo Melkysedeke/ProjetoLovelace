@@ -9,28 +9,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/nav.css">
 </head>
 <body>
     <header>
-        <div id="header">
+        <nav id="nav">
             <p>Lovelace</p>
+            <button id="btn-menu">
+                <span id="hamburguer"></span>
+            </button>
             <ul id="menu">
                 <li><button id="toTeacher">Para professores</button></li>
                 <li><button id="aboutUs">Sobre nós</button></li>
                 <li><button id="login">Login</button></li>
             </ul>
-        </div>
+        </nav>
     </header>
     <main>
+        <img src="assets/img/Form_1.svg" alt="form_1" id="form_1">
+        <img src="assets/img/Form_2.svg" alt="form_2" id="form_2">
+        <img src="assets/img/Form_3.svg" alt="form_3" id="form_3">
+        <img src="assets/img/ellipse_1.svg" alt="" id="grad_1">
+        <img src="assets/img/ellipse_2.svg" alt="" id="grad_2">
+        <img src="assets/img/ellipse_4.svg" alt="" id="grad_3">
+        <img src="assets/img/ellipse_3.svg" alt="" id="grad_4">
         <div id="text_main">
             <h1>Melhore suas habilidades de leitura em inglês! Experimente agora!</h1>
             <p>Descubra como Lovelace pode transformar sua maneira de aprende inglês. Teste agora mesmo e veja a diferença por si mesmo!</p>
             <button>Comece a usar</button>
         </div>
         <div id="img_main">
-            <img id="elem1" src="assets/img/element_1.svg" alt="Img_decoration">
-            <img src="assets/img/result.svg" alt="Img_result">
-            <img id="elem2" src="assets/img/element_1.svg" alt="Img_decoration">
+            <img class="elem1" src="assets/img/element_1.svg" alt="img_decoration">
+            <img src="assets/img/result.svg" alt="img_result" style="width: 99.9%;">
+            <img class="elem1" src="assets/img/element_1.svg" alt="img_decoration">
         </div>
         <div id="info">
             <div class="text_info">
@@ -58,5 +69,6 @@
         </div>
     </main>
     <footer></footer>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
