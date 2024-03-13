@@ -6,117 +6,50 @@
     <title>Lovelace</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            font-family: "Inter", sans-serif;
-            list-style: none;
-        }
-
-        header {
-            border-bottom: 1px solid black;
-            height: 100px;
-            padding: 0px 160px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 24px;
-        }
-
-        #menu {
-            display: flex;
-            gap: 64px;
-        }
-
-        #menu button {
-            font-size: 24px;
-            padding: 8px;
-            border-radius: 6px;
-        }
-
-        #text_1 {
-            display: flex;
-            flex-direction: column;
-            width: 638px;
-            text-align: center;
-            gap: 64px;
-        }
-
-        main {
-            border: 1px solid black;
-            padding: 140px 0px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        #info {
-            border: 1px solid black;
-            width: 1095px;
-        }
-
-        #info > div {
-            border: 1px solid black;
-            display: flex;
-            gap: 64px;
-        }
-
-        #gutenberg {
-            border: 1px solid black;
-            width: 1095px;
-            display: flex;
-            flex-direction: column;
-            gap: 48px;
-            text-align: center;
-        }
-
-        iframe {
-            margin: auto;
-            width: 95%;
-            height: 423px;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
     <header>
         <p>Lovelace</p>
         <ul id="menu">
-            <li><button id="">Para professores</button></li>
-            <li><button id="">Sobre nós</button></li>
-            <li><button id="">Login</button></li>
+            <li><button id="toTeacher">Para professores</button></li>
+            <li><button id="aboutUs">Sobre nós</button></li>
+            <li><button id="login">Login</button></li>
         </ul>
     </header>
     <main>
-        <div id="text_1">
+        <div id="text_main">
             <h1>Melhore suas habilidades de leitura em inglês! Experimente agora!</h1>
             <p>Descubra como Lovelace pode transformar sua maneira de aprende inglês. Teste agora mesmo e veja a diferença por si mesmo!</p>
             <button>Comece a usar</button>
+        </div>
+        <div id="img_main">
+            <img src="" alt="Img_decoration">
             <img src="" alt="Img_result">
+            <img src="" alt="Img_decoration">
         </div>
         <div id="info">
-            <img src="" alt="Img_decoration">
-            <div>
+            <div class="text_info">
                 <img src="#" alt="Img_decoration">
                 <p>Utilizamos tecnologia de ponta e design moderno para tornar o aprendizado mais interessante, envolvente e adaptado às necessidades individuais. Comprometidos em oferecer uma educação de qualidade.</p>
             </div>
-            <div>
+            <div class="text_info">
                 <p>Oferecemos resultados imediatos para atividades realizadas na plataforma. Monitore seu progresso e compreenda os conceitos estudados rapidamente.</p>
                 <img src="#" alt="Img_decoration">
             </div>
-            <div>
+            <div class="text_info">
                 <img src="#" alt="Img_decoration">
                 <p>Exporte resultados das atividades em PDF, tendo acesso a eles em qualquer momento e lugar. Compartilhe seu progresso com colegas ou professores.</p>
             </div>
-            <div>
+            <div class="text_info">
                 <p>Nossa ferramenta é exclusiva para a comunidade do IFBA. Adaptada para suas necessidades e desafios, garantimos um aprendizado efetivo e prático.</p>
                 <img src="#" alt="Img_decoration">
             </div>
         </div>
         <div id="gutenberg">
-            <h2>Material exclusivo: Projeto Gutenberg</h2>
+            <h1>Material exclusivo: Projeto Gutenberg</h1>
             <p>Conheça o projeto Gutenberg! A maior biblioteca online de livros gratuitos do mundo. São milhares de obras disponíveis para download em diversos formatos, incluindo ePub, HTML, Kindle e PDF. Acesse agora e enriqueça seu vocabulário.</p>
             <iframe src="https://www.gutenberg.org/" frameborder="0"></iframe>
             <button>Acessar o projeto</button>
