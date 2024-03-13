@@ -9,6 +9,10 @@
     --color1: #F21B3F;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 header {
     border-bottom: 1px solid black;
     height: 100px;
@@ -80,6 +84,25 @@ main {
     font-weight: 500;
 }
 
+#img_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 210px;
+}
+
+#elem1 {
+    position: absolute;
+    top: -40%;
+    z-index: -1;
+}
+
+#elem2 {
+    position: absolute;
+    bottom:-40%;
+}
+
 #info {
     border: 1px solid black;
     width: 1095px;
@@ -128,6 +151,11 @@ main {
     height: 51px;
     padding: 16px;
     border-radius: 8px;
+    background-color: var(--color1);
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 iframe {
@@ -135,3 +163,39 @@ iframe {
     width: 95%;
     height: 423px;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: lightgray; 
+    border-radius:32px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color1); 
+  }
+
+  @-moz-document url-prefix() {
+    scrollbar {
+      width: 10px;
+    }
+  
+    scrollbar[orient="vertical"] {
+      background-color: #f1f1f1; 
+    }
+  
+    scrollbar thumb {
+      background-color: lightgray;
+      border-radius:32px;
+    }
+  
+    scrollbar thumb:hover {
+      background-color: var(--color1);
+    }
+  }
