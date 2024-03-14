@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lovelace - Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: "Inter", sans-serif;
+        }
+
+        :root {
+            --color1: #F21B3F;
+            --color2: #1D2F6F;
+        }
+
         body {
-            height: calc(100vh - 20px);
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: 2px solid black;
+            /* border: 1px solid black; */
         }
 
         div {
@@ -18,22 +32,84 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border: 1px solid black;
+            border: 1px solid var(--color1);
             height: 533px;
             width: 500px;
             gap: 24px;
+            border-radius: 16px;
+        }
+
+        /* img {
+            width: 100px;
+            height: 100px;
+            border: 1px solid var(--color1);
+            border-radius: 16px;
+        } */
+
+        #img {
+            width: 100px;
+            height: 100px;
+            border: 1px solid var(--color1);
+            border-radius: 16px;
+            background-image: radial-gradient(circle at top left, white 25%, rgba(128, 128, 128, 0.3));
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        input {
+            height: 40px;
+            width: 312px;
+            border-radius: 6px;
+            border: 1px solid var(--color1);
+            padding: 0px 24px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        button {
+            height: 40px;
+            width: 360px;
+            border-radius: 6px;
+            border: 1px solid var(--color1);
+            background-color: var(--color1);
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+        }
+
+        #passw {
+            border: none;
+            height: min-content;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+
+        }
+
+        a {
+            font-size: 12px;
+            font-weight: 500;
+            color: #13101473;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div>
-        <img src="#" alt="Lace_avatar">
+        <!-- <img src="" alt="Lace_avatar"> -->
+        <div id="img">Love</div>
         <p>Vamos Praticar?</p>
-        <input type="email" name="email" id="email" placeholder="Seu e-mail">
-        <input type="password" name="name" id="name" placeholder="Sua senha">
+        <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
+        <input type="password" name="name" id="name" placeholder="Sua senha" required>
         <button type="submit">Fazer login</button>
-        <a href="#">Esqueceu a senha?</a>
-        <a href="#">Ainda não tem uma conta?</a>
+        <div id="passw">
+            <a href="#">Esqueceu a senha?</a>
+            <a href="#">Ainda não tem uma conta?</a>
+        </div>
     </div>
 </body>
 </html>
