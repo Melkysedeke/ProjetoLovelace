@@ -1,0 +1,8 @@
+.tArea {
+    border: none;
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    resize: none;
+}

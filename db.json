@@ -1,50 +1,5 @@
 {
   "activities": [
-    {
-      "id": "f7af",
-      "name": "Exemplo de sala",
-      "description": "Vamos escrever umas coisas aleatóriuas só para encher o prato",
-      "accessCode": "IMwWF0Di",
-      "questions": [
-        {
-          "id": 1718195597335,
-          "proposal": "Essa é difícil",
-          "text": "Quantos tigres tinham na história dos 3 tigres tristes?"
-        },
-        {
-          "id": 1718195649045,
-          "proposal": "Vambora?",
-          "text": "Cansei"
-        }
-      ]
-    },
-    {
-      "id": "ab2c",
-      "name": "asfadfd",
-      "description": "dafdafdafdafdafda",
-      "accessCode": "RTFXdadN",
-      "questions": [
-        {
-          "id": 1718195790021,
-          "proposal": "Vambora?",
-          "text": "Boraa"
-        },
-        {
-          "id": 1718195796083,
-          "proposal": "Sei lá... sem ideia",
-          "text": "Bora"
-        },
-        {
-          "id": 1718195804467,
-          "proposal": "Sei lá... sem ideia",
-          "text": "Quantos tigres tinham na história dos 3 tigres tristes?"
-        },
-        {
-          "id": 1718195812447,
-          "proposal": "dasfda",
-          "text": "dadfadfsdfsdadfdsfsdafd"
-        }
-      ]
-    }
+    
   ]
 }

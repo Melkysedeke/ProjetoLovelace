@@ -6,7 +6,26 @@
 }
 
 html, body, #root {
-  background-color: #efefef;
+  background-color: #ffff;
   height: 100%;
   color: black;
+}
+
+.btn {
+  background-color: #222;
+  color: #fff;
+  padding: .5em 1em;
+  text-decoration: none;
+  transition: .5s;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  color: #ffbb33;
+}
+
+.container_all {
+  height: 100%;
+  width: 100%;
+  padding: 0 30px;
 }

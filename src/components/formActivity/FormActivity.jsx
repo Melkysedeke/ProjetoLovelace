@@ -2,8 +2,10 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import InputForm from './InputForm';
+import TextArea from './TextArea'
 import QuestionBox from '../questions/QuestionBox';
 import SubmitButton from './SubmitButton';
+import styles from './FormActivity.module.css'
 
 function generateAccessCode(length = 8) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -55,31 +57,38 @@ function FormActivity({ handleSubmit }) {
 
     const submit = (e) => {
         e.preventDefault();
-        handleSubmit(activities).then((createdActivity) => {
-            navigate(`/activity/${createdActivity.id}`);
-        });
+        handleSubmit(activities)
+            .then((createdActivity) => {
+                navigate(`/activity/${createdActivity.id}`);
+            })
+            .catch((error) => {
+                console.error('Erro ao criar a atividade:', error);
+            });
     };
 
     return (
-        <form onSubmit={submit} className="dynamic-form">
-            <h1>Criar Sala</h1>
-            <InputForm
-                type="text"
-                name="name"
-                placeholder="Nome da Sala"
-                value={activities.name}
-                handleOnChange={handleChange}
-            />
-            <InputForm
-                type="text"
-                name="description"
-                placeholder="Descrição"
-                value={activities.description}
-                handleOnChange={handleChange}
-            />
-            <h2>Perguntas</h2>
-            <button type="button" onClick={addQuestion}>Adicionar Pergunta</button>
-            <div className="questions-container">
+        <form onSubmit={submit} className={styles.form_container} >
+            <div className={styles.navbar}>
+                <h1>Criar Sala</h1>
+                <SubmitButton text="Criar Sala" />
+            </div>
+            <div className={styles.header_container}>
+                <InputForm className={styles.header_container_input}
+                    type="text"
+                    name="name"
+                    placeholder="Nome da Sala"
+                    value={activities.name}
+                    handleOnChange={handleChange}
+                />
+                <TextArea
+                    name="description"
+                    placeholder="Descrição"
+                    value={activities.description}
+                    handleOnChange={handleChange}
+                />
+            </div>
+            <button className={styles.btn} type="button" onClick={addQuestion}>Adicionar Pergunta</button>
+            <div className={styles.questions_container}>
                 {activities.questions.length > 0 && activities.questions.map((question) => (
                     <QuestionBox
                         key={question.id}
@@ -91,7 +100,6 @@ function FormActivity({ handleSubmit }) {
                     />
                 ))}
             </div>
-            <SubmitButton text="Criar Sala" />
         </form>
     );
 }

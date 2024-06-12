@@ -9,7 +9,7 @@ import AccessCode from './components/pages/AccessCode';
 function App() {
   return (
     <Router>
-      <Container customClass="column">
+      <Container className="container_all">
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/createactivity' element={<CreateActivity/>}/>
