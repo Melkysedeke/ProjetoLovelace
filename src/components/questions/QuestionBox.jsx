@@ -36,7 +36,7 @@ function QuestionBox({ id, proposal, text, handleQuestionChange, handleRemove })
                 required={true}
             />
             <button className={styles.qButton} onClick={remove}>
-                    <BsFillTrashFill>Excluir</BsFillTrashFill>
+                    <BsFillTrashFill className={styles.qTrash}>Excluir</BsFillTrashFill>
             </button>
         </div>
     );

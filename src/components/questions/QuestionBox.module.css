@@ -11,15 +11,36 @@
 }
 
 .qBox:hover {
-    border: 1px solid #222;
+    border: 1px solid #8e8e8e;
     transform: scale(105%);
+}
+
+.qBox:hover > .qButton {
+    background-color:  #F21B3F;
+}
+
+.qBox:hover > .qButton > .qTrash{
+    color:  white;
 }
 
 .qButton {
     margin-top: 10px;
     font-size: 15px;
     width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: none;
+    border-radius: 2px;
+    transition: .5s;
+}
+
+.qButton:hover {
+    background-color: #F21B3F;
+}
+
+.qTrash {
+    color: #8e8e8e;
+    transition: .5s;
 }

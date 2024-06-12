@@ -12,7 +12,7 @@ html, body, #root {
 }
 
 .btn {
-  background-color: #222;
+  background-color: #F21B3F;
   color: #fff;
   padding: .5em 1em;
   text-decoration: none;
@@ -21,7 +21,7 @@ html, body, #root {
 }
 
 .btn:hover {
-  color: #ffbb33;
+  color: #8e8e8e;
 }
 
 .container_all {
