@@ -59,7 +59,7 @@ function FormActivity({ handleSubmit }) {
         e.preventDefault();
         handleSubmit(activities)
             .then((createdActivity) => {
-                navigate(`/activity/${createdActivity.id}`);
+                navigate(`/ProjetoLovelace/activity/${createdActivity.id}`);
             })
             .catch((error) => {
                 console.error('Erro ao criar a atividade:', error);

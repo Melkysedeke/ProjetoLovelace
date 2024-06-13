@@ -15,7 +15,7 @@ function CreateActivity(){
         .then((resp)=>resp.json())
         .then((data)=>{
             console.log(data)
-            navigate(`/activity/${data.id}`)
+            navigate(`/ProjetoLovelace/activity/${data.id}`)
         })
         .catch((err)=>console.log(err))
     }

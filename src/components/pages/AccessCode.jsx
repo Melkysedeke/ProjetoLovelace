@@ -15,7 +15,7 @@ function AccessPage() {
             .then((data) => {
                 if (data.length > 0) {
                     const activity = data[0];
-                    navigate(`/access/${activity.id}`);
+                    navigate(`/ProjetoLovelace/access/${activity.id}`);
                 } else {
                     alert('Activity not found');
                 }
