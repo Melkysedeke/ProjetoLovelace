@@ -1,7 +1,6 @@
 // components/ActivityDetail.jsx
 import  { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import styles from './Activity.module.css'
 
 function ActivityDetail() {
     const { id } = useParams();
@@ -19,10 +18,10 @@ function ActivityDetail() {
     }
 
     return (
-        <div className={styles.container_form}> 
+        <div> 
             <h1>{activity.name}</h1>
             <h2>{activity.description}</h2>
-            <ul className={styles.questions_list}>
+            <ul>
                 {activity.questions.map((question) => (
                     <li key={question.id}>
                         <strong>{question.proposal}</strong>

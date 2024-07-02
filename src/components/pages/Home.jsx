@@ -1,9 +1,10 @@
-import styles from './Home.module.css'
+import Header from "../layout/Header";
 import LinkButton from "../layout/LinkButton";
 
 function Home(){
     return(
-        <div className={styles.container_home}>
+        <div>
+            <Header/>
             <h1>Bem-vindo ao Lovelace</h1>
             <LinkButton to='/ProjetoLovelace/createactivity' text='Criar atividade'/>
             <LinkButton to='/ProjetoLovelace/accesscode' text='Acessar atividade'/>

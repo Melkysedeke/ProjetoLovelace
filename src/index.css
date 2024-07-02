@@ -10,22 +10,3 @@ html, body, #root {
   height: 100%;
   color: black;
 }
-
-.btn {
-  background-color: #F21B3F;
-  color: #fff;
-  padding: .5em 1em;
-  text-decoration: none;
-  transition: .5s;
-  border-radius: 8px;
-}
-
-.btn:hover {
-  color: #8e8e8e;
-}
-
-.container_all {
-  height: 100%;
-  width: 100%;
-  padding: 0 30px;
-}

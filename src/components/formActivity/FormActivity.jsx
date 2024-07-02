@@ -5,7 +5,6 @@ import InputForm from './InputForm';
 import TextArea from './TextArea'
 import QuestionBox from '../questions/QuestionBox';
 import SubmitButton from './SubmitButton';
-import styles from './FormActivity.module.css'
 
 function generateAccessCode(length = 8) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -67,13 +66,13 @@ function FormActivity({ handleSubmit }) {
     };
 
     return (
-        <form onSubmit={submit} className={styles.form_container} >
-            <div className={styles.navbar}>
+        <form onSubmit={submit}>
+            <div>
                 <h1>Criar Sala</h1>
                 <SubmitButton text="Criar Sala" />
             </div>
-            <div className={styles.header_container}>
-                <InputForm className={styles.header_container_input}
+            <div>
+                <InputForm
                     type="text"
                     name="name"
                     placeholder="Nome da Sala"
@@ -87,8 +86,8 @@ function FormActivity({ handleSubmit }) {
                     handleOnChange={handleChange}
                 />
             </div>
-            <button className={styles.btn} type="button" onClick={addQuestion}>Adicionar Pergunta</button>
-            <div className={styles.questions_container}>
+            <button type="button" onClick={addQuestion}>Adicionar Pergunta</button>
+            <div>
                 {activities.questions.length > 0 && activities.questions.map((question) => (
                     <QuestionBox
                         key={question.id}

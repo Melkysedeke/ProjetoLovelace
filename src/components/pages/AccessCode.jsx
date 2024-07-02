@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import styles from './AccessCode.module.css'
 import SubmitButton from '../formActivity/SubmitButton'
 
 function AccessPage() {
@@ -24,9 +23,9 @@ function AccessPage() {
     };
 
     return (
-        <div className={styles.container_access}>
+        <div>
             <h1>Acessar Atividade</h1>
-            <form onSubmit={handleSubmit} className={styles.container_form}>
+            <form onSubmit={handleSubmit}>
                 <input
                     type="text"
                     placeholder="Código de Acesso"

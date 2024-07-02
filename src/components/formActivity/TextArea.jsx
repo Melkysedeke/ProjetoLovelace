@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import styles from './TextArea.module.css';
 import { useRef, useEffect } from 'react';
 
 function TextArea({ name, placeholder, value, handleOnChange, required }) {
@@ -26,7 +25,6 @@ function TextArea({ name, placeholder, value, handleOnChange, required }) {
         <>
             <textarea
                 ref={textareaRef}
-                className={styles.tArea}
                 id="mensagem"
                 name={name}
                 placeholder={placeholder}

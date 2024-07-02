@@ -2,7 +2,6 @@
 import InputForm from '../formActivity/InputForm';
 import TextArea from '../formActivity/TextArea';
 import {BsFillTrashFill} from 'react-icons/bs'
-import styles from './QuestionBox.module.css'
 
 function QuestionBox({ id, proposal, text, handleQuestionChange, handleRemove }) {
     const handleProposalChange = (e) => {
@@ -19,7 +18,7 @@ function QuestionBox({ id, proposal, text, handleQuestionChange, handleRemove })
     }
 
     return (
-        <div className={styles.qBox}>
+        <div >
             <InputForm
                 type="text"
                 name="proposal"
@@ -35,8 +34,8 @@ function QuestionBox({ id, proposal, text, handleQuestionChange, handleRemove })
                 handleOnChange={handleTextChange}
                 required={true}
             />
-            <button className={styles.qButton} onClick={remove}>
-                    <BsFillTrashFill className={styles.qTrash}>Excluir</BsFillTrashFill>
+            <button onClick={remove}>
+                    <BsFillTrashFill>Excluir</BsFillTrashFill>
             </button>
         </div>
     );

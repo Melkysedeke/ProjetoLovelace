@@ -7,6 +7,9 @@ import AccessActivity from './components/pages/AccessActivity'
 import Home from './components/pages/Home';
 import Activity from './components/pages/Activity';
 import AccessCode from './components/pages/AccessCode';
+import Register from './components/pages/Register.jsx';
+import Login from './components/pages/Login.jsx';
+import UserArea from './components/pages/UserArea.jsx';
 
 const router = createBrowserRouter([
 	{
@@ -32,6 +35,18 @@ const router = createBrowserRouter([
 			{
 				path: "/ProjetoLovelace/accesscode",
 				element: <AccessCode/>,
+			},
+			{
+				path: "/ProjetoLovelace/register",
+				element: <Register/>,
+			},
+			{
+				path: "/ProjetoLovelace/login",
+				element: <Login/>,
+			},
+			{
+				path: "/ProjetoLovelace/Ua",
+				element: <UserArea/>,
 			},
 		],
 	},

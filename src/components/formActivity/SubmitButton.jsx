@@ -1,9 +1,8 @@
 /* eslint-disable react/prop-types */
-import styles from '../layout/LinkButton.module.css'
 
 function SubmitButton({ text }) {
     return (
-        <button type="submit" className={styles.btn}>
+        <button type="submit">
             {text}
         </button>
     );

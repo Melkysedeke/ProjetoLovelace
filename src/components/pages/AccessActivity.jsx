@@ -1,7 +1,6 @@
 // components/AccessActivity.jsx
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import styles from './AccessActivity.module.css'
 
 function AccessActivity() {
     const { id } = useParams();
@@ -43,12 +42,12 @@ function AccessActivity() {
     }
 
     return (
-        <div className={styles.container_form}>
+        <div>
             <h1>{activity.name}</h1>
             <p>{activity.description}</p>
             <form onSubmit={submitResponses}>
                 {activity.questions.map((question) => (
-                    <div className={styles.questions} key={question.id}>
+                    <div key={question.id}>
                         <strong>{question.proposal}</strong>
                         <p>{question.text}</p>
                         <textarea
