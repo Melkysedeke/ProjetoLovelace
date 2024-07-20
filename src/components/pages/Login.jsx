@@ -3,6 +3,7 @@ import InputForm from "../formActivity/InputForm";
 import SubmitButton from "../formActivity/SubmitButton";
 import LinkButton from "../layout/LinkButton";
 import { useNavigate } from "react-router-dom";
+import BackButton from "../layout/BackButton";
 
 function Login() {
     const [emailUser, setEmailUser] = useState("");
@@ -33,7 +34,7 @@ function Login() {
                 if (user.password === passwordUser) {
                     // Login bem-sucedido
                     alert("Login bem-sucedido!");
-                    navigate("/ProjetoLovelace/Ua")
+                    navigate("/Ua")
                     // Aqui você pode redirecionar o usuário para a próxima página
                 } else {
                     // Senha incorreta
@@ -49,12 +50,13 @@ function Login() {
 
     return (
         <div>
+            <BackButton/>
             <form onSubmit={logarConta}>
                 <InputForm name="Email" placeholder="E-mail" type="email" required={true} handleOnChange={handleEmailChange} />
                 <InputForm name="Password" placeholder="Senha" type="password" required={true} handleOnChange={handlePasswordChange} />
                 <SubmitButton text="Login" />
                 {error && <p style={{ color: 'red' }}>{error}</p>}
-                <p>Você não tem login? <LinkButton text="Cadastrar" to="/ProjetoLovelace/register"/></p>
+                <p>Você não tem login? <LinkButton text="Cadastrar" to="/register"/></p>
             </form>
         </div>
     );

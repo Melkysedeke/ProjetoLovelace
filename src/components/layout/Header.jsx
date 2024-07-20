@@ -4,7 +4,7 @@ function Header(){
     return(
         <header>
             <LinkButton text="Praticar" to=""/>
-            <LinkButton text="Login/Cadastro" to="/ProjetoLovelace/login"/>
+            <LinkButton text="Login/Cadastro" to="/login"/>
         </header>
     )
 }

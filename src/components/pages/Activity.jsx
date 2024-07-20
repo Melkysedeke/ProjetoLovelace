@@ -2,7 +2,7 @@
 import  { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
-function ActivityDetail() {
+function Activity() {
     const { id } = useParams();
     const [activity, setActivity] = useState();
 
@@ -35,4 +35,4 @@ function ActivityDetail() {
     );
 }
 
-export default ActivityDetail;
+export default Activity;

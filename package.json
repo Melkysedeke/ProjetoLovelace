@@ -1,6 +1,5 @@
 {
   "name": "lovelace",
-  "homepage": "https://melkysedeke.github.io/ProjetoLovelace/",
   "private": true,
   "version": "0.0.0",
   "type": "module",

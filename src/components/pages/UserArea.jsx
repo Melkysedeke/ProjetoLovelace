@@ -4,7 +4,7 @@ export default function UserArea(){
     return (
         <>
             <h1>Área de usuário</h1>
-            <LinkButton to='/ProjetoLovelace/createactivity' text='Criar atividade'/>
+            <LinkButton to='/createactivity' text='Criar atividade'/>
         </>
         )
     }

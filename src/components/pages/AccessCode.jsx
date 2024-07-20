@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SubmitButton from '../formActivity/SubmitButton'
+import BackButton from '../layout/BackButton';
 
-function AccessPage() {
+function AccessCode() {
     const [accessCode, setAccessCode] = useState('');
     const navigate = useNavigate();
 
@@ -14,7 +15,7 @@ function AccessPage() {
             .then((data) => {
                 if (data.length > 0) {
                     const activity = data[0];
-                    navigate(`/ProjetoLovelace/access/${activity.id}`);
+                    navigate(`/access/${activity.id}`);
                 } else {
                     alert('Activity not found');
                 }
@@ -24,6 +25,7 @@ function AccessPage() {
 
     return (
         <div>
+            <BackButton/>
             <h1>Acessar Atividade</h1>
             <form onSubmit={handleSubmit}>
                 <input
@@ -38,4 +40,4 @@ function AccessPage() {
     );
 }
 
-export default AccessPage;
+export default AccessCode;

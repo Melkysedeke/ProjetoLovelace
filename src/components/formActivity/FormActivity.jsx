@@ -5,6 +5,7 @@ import InputForm from './InputForm';
 import TextArea from './TextArea'
 import QuestionBox from '../questions/QuestionBox';
 import SubmitButton from './SubmitButton';
+import BackButton from '../layout/BackButton';
 
 function generateAccessCode(length = 8) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -58,7 +59,7 @@ function FormActivity({ handleSubmit }) {
         e.preventDefault();
         handleSubmit(activities)
             .then((createdActivity) => {
-                navigate(`/ProjetoLovelace/activity/${createdActivity.id}`);
+                navigate(`/activity/${createdActivity.id}`);
             })
             .catch((error) => {
                 console.error('Erro ao criar a atividade:', error);
@@ -66,40 +67,43 @@ function FormActivity({ handleSubmit }) {
     };
 
     return (
-        <form onSubmit={submit}>
-            <div>
-                <h1>Criar Sala</h1>
-                <SubmitButton text="Criar Sala" />
-            </div>
-            <div>
-                <InputForm
-                    type="text"
-                    name="name"
-                    placeholder="Nome da Sala"
-                    value={activities.name}
-                    handleOnChange={handleChange}
-                />
-                <TextArea
-                    name="description"
-                    placeholder="Descrição"
-                    value={activities.description}
-                    handleOnChange={handleChange}
-                />
-            </div>
-            <button type="button" onClick={addQuestion}>Adicionar Pergunta</button>
-            <div>
-                {activities.questions.length > 0 && activities.questions.map((question) => (
-                    <QuestionBox
-                        key={question.id}
-                        id={question.id}
-                        proposal={question.proposal}
-                        text={question.text}
-                        handleQuestionChange={handleQuestionChange}
-                        handleRemove={removeQuestion}
+        <>
+            <BackButton/>
+            <form onSubmit={submit}>
+                <div>
+                    <h1>Criar Sala</h1>
+                    <SubmitButton text="Criar Sala" />
+                </div>
+                <div>
+                    <InputForm
+                        type="text"
+                        name="name"
+                        placeholder="Nome da Sala"
+                        value={activities.name}
+                        handleOnChange={handleChange}
                     />
-                ))}
-            </div>
-        </form>
+                    <TextArea
+                        name="description"
+                        placeholder="Descrição"
+                        value={activities.description}
+                        handleOnChange={handleChange}
+                    />
+                </div>
+                <button type="button" onClick={addQuestion}>Adicionar Pergunta</button>
+                <div>
+                    {activities.questions.length > 0 && activities.questions.map((question) => (
+                        <QuestionBox
+                            key={question.id}
+                            id={question.id}
+                            proposal={question.proposal}
+                            text={question.text}
+                            handleQuestionChange={handleQuestionChange}
+                            handleRemove={removeQuestion}
+                        />
+                    ))}
+                </div>
+            </form>
+        </>
     );
 }
 

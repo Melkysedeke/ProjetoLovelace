@@ -3,6 +3,7 @@ import InputForm from "../formActivity/InputForm";
 import SubmitButton from "../formActivity/SubmitButton";
 import LinkButton from "../layout/LinkButton";
 import { useNavigate } from "react-router-dom";
+import BackButton from "../layout/BackButton";
 
 function Register() {
     const [nameUser, setNameUser] = useState("");
@@ -58,7 +59,7 @@ function Register() {
                         alert("Cadastro realizado com sucesso!");
                         console.log(data)
                         setTimeout(() => {
-                            navigate("/ProjetoLovelace/Ua");
+                            navigate("/Ua");
                         }, 300);
                     })
                     .catch(err => console.log(err));
@@ -69,6 +70,7 @@ function Register() {
 
     return (
         <div>
+            <BackButton/>
             <h2>Cadastro de Usuário</h2>
             <form onSubmit={cadastrarConta}>
                 <InputForm name="Name" placeholder="Nome" type="text" required={true} handleOnChange={handleNameChange} />
@@ -77,7 +79,7 @@ function Register() {
                 <InputForm name="ConfirmPassword" placeholder="Confirmar Senha" type="password" required={true} handleOnChange={handleConfirmPasswordChange} />
                 {error && <p style={{ color: 'red' }}>{error}</p>}
                 <SubmitButton text="Cadastrar" />
-                <p>Já tem uma conta? <LinkButton text="Login" to="/ProjetoLovelace/Login"/></p>
+                <p>Já tem uma conta? <LinkButton text="Login" to="/Login"/></p>
             </form>
         </div>
     );
