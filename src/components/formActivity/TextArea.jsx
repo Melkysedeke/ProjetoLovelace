@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useRef, useEffect } from 'react';
+import styles from './TextArea.module.css'
 
 function TextArea({ name, placeholder, value, handleOnChange, required }) {
     const textareaRef = useRef(null);
@@ -7,7 +8,7 @@ function TextArea({ name, placeholder, value, handleOnChange, required }) {
     function autoResize() {
         const textarea = textareaRef.current;
         textarea.style.height = 'auto'; // Redefine a altura para calcular a nova altura correta
-        const maxHeight = 5 * 20; // Assume 20px de altura por linha, ajustável conforme o necessário
+        const maxHeight = 5 * 24; // Assume 20px de altura por linha, ajustável conforme o necessário
         if (textarea.scrollHeight > maxHeight) {
             textarea.style.height = maxHeight + 'px';
             textarea.style.overflowY = 'auto'; // Mostra a barra de rolagem vertical se a altura máxima for atingida
@@ -23,10 +24,10 @@ function TextArea({ name, placeholder, value, handleOnChange, required }) {
 
     return (
         <>
-            <textarea
+            <textarea className={styles.textarea}
                 ref={textareaRef}
-                id="mensagem"
                 name={name}
+                id={name}
                 placeholder={placeholder}
                 value={value}
                 onChange={(e) => {

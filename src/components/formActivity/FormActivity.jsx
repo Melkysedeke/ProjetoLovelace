@@ -6,6 +6,8 @@ import TextArea from './TextArea'
 import QuestionBox from '../questions/QuestionBox';
 import SubmitButton from './SubmitButton';
 import BackButton from '../layout/BackButton';
+import styles from './FormActivity.module.css';
+import plus from '../../assets/plus.svg'
 
 function generateAccessCode(length = 8) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -67,43 +69,43 @@ function FormActivity({ handleSubmit }) {
     };
 
     return (
-        <>
-            <BackButton/>
-            <form onSubmit={submit}>
-                <div>
-                    <h1>Criar Sala</h1>
-                    <SubmitButton text="Criar Sala" />
-                </div>
-                <div>
-                    <InputForm
-                        type="text"
-                        name="name"
-                        placeholder="Nome da Sala"
-                        value={activities.name}
-                        handleOnChange={handleChange}
+        <form className={styles.form} onSubmit={submit}>
+            <div className={styles.top}>
+                <BackButton/>
+                <h1>Criar Sala</h1> 
+                <SubmitButton text="Salvar" />
+            </div>
+            <div className={styles.header}>
+                <InputForm
+                    type="text"
+                    name="name"
+                    placeholder="Nome da Sala"
+                    value={activities.name}
+                    handleOnChange={handleChange}
+                />
+                <TextArea
+                    name="description"
+                    placeholder="Descrição"
+                    value={activities.description}
+                    handleOnChange={handleChange}
+                />
+            </div>
+            <div className={styles.container_question}>
+                {activities.questions.length > 0 && activities.questions.map((question) => (
+                    <QuestionBox
+                    key={question.id}
+                    id={question.id}
+                    proposal={question.proposal}
+                    text={question.text}
+                    handleQuestionChange={handleQuestionChange}
+                    handleRemove={removeQuestion}
                     />
-                    <TextArea
-                        name="description"
-                        placeholder="Descrição"
-                        value={activities.description}
-                        handleOnChange={handleChange}
-                    />
-                </div>
-                <button type="button" onClick={addQuestion}>Adicionar Pergunta</button>
-                <div>
-                    {activities.questions.length > 0 && activities.questions.map((question) => (
-                        <QuestionBox
-                            key={question.id}
-                            id={question.id}
-                            proposal={question.proposal}
-                            text={question.text}
-                            handleQuestionChange={handleQuestionChange}
-                            handleRemove={removeQuestion}
-                        />
-                    ))}
-                </div>
-            </form>
-        </>
+                ))}
+            </div>
+            <button type="button" onClick={addQuestion}>
+                <img src={plus} alt="Adicionar-pergunta" />
+            </button>
+        </form>
     );
 }
 

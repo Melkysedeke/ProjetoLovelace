@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+import styles from './InputForm.module.css'
 
 function InputForm({ type, name, placeholder, value, handleOnChange, required}) {
     return (
         <>
-            <input
+            <input className={styles.input}
                 type={type}
                 name={name}
                 placeholder={placeholder}

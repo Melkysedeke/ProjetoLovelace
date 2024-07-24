@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 import InputForm from '../formActivity/InputForm';
 import TextArea from '../formActivity/TextArea';
-import {BsFillTrashFill} from 'react-icons/bs'
+import trash from '../../assets/trash.svg'
+import styles from './QuestionBox.module.css'
 
 function QuestionBox({ id, proposal, text, handleQuestionChange, handleRemove }) {
     const handleProposalChange = (e) => {
@@ -18,7 +19,7 @@ function QuestionBox({ id, proposal, text, handleQuestionChange, handleRemove })
     }
 
     return (
-        <div >
+        <div className={styles.question_box}>
             <InputForm
                 type="text"
                 name="proposal"
@@ -34,8 +35,8 @@ function QuestionBox({ id, proposal, text, handleQuestionChange, handleRemove })
                 handleOnChange={handleTextChange}
                 required={true}
             />
-            <button onClick={remove}>
-                    <BsFillTrashFill>Excluir</BsFillTrashFill>
+            <button className={styles.trash} onClick={remove}>
+                <img src={trash} alt="deletar" />
             </button>
         </div>
     );
