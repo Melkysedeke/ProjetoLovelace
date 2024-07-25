@@ -11,7 +11,7 @@ export default function BackButton(){
     };
 
     return (
-        <button className={styles.btn} onClick={handleBackClick}>
+        <button type='button' className={styles.btn} onClick={handleBackClick}>
             <img src={returno} alt="return" />
         </button>
     )

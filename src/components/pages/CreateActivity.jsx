@@ -7,7 +7,7 @@ function CreateActivity(){
     function createPost(Activities){
         fetch('http://localhost:4000/activities', {
             method: 'POST',
-            heraders: {
+            headers: {
                 'Content-type': 'application/json',
             },
             body: JSON.stringify(Activities),

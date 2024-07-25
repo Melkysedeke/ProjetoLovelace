@@ -26,7 +26,6 @@ function FormActivity({ handleSubmit }) {
         accessCode: generateAccessCode(), // Generate access code when activity is created
         questions: []
     });
-    const navigate = useNavigate();
 
     const handleChange = (e) => {
         setActivities({
@@ -69,43 +68,49 @@ function FormActivity({ handleSubmit }) {
     };
 
     return (
-        <form className={styles.form} onSubmit={submit}>
-            <div className={styles.top}>
+        <>
+            <header className={styles.top}>
+                <nav>
                 <BackButton/>
-                <h1>Criar Sala</h1> 
-                <SubmitButton text="Salvar" />
-            </div>
-            <div className={styles.header}>
-                <InputForm
-                    type="text"
-                    name="name"
-                    placeholder="Nome da Sala"
-                    value={activities.name}
-                    handleOnChange={handleChange}
-                />
-                <TextArea
-                    name="description"
-                    placeholder="Descrição"
-                    value={activities.description}
-                    handleOnChange={handleChange}
-                />
-            </div>
-            <div className={styles.container_question}>
-                {activities.questions.length > 0 && activities.questions.map((question) => (
-                    <QuestionBox
-                    key={question.id}
-                    id={question.id}
-                    proposal={question.proposal}
-                    text={question.text}
-                    handleQuestionChange={handleQuestionChange}
-                    handleRemove={removeQuestion}
+                    <h1>Criar Sala</h1>
+                    <SubmitButton text="Salvar" />
+                </nav>
+            </header>
+            <form className={styles.form} onSubmit={submit}>
+                <div className={styles.header}>
+                    <InputForm
+                        type="text"
+                        name="name"
+                        placeholder="Nome da Sala"
+                        value={activities.name}
+                        handleOnChange={handleChange}
+                        required="required"
                     />
-                ))}
-            </div>
-            <button type="button" onClick={addQuestion}>
-                <img src={plus} alt="Adicionar-pergunta" />
-            </button>
-        </form>
+                    <TextArea
+                        name="description"
+                        placeholder="Descrição"
+                        value={activities.description}
+                        handleOnChange={handleChange}
+                        required="required"
+                    />
+                </div>
+                <div className={styles.container_question}>
+                    {activities.questions.length > 0 && activities.questions.map((question) => (
+                        <QuestionBox
+                        key={question.id}
+                        id={question.id}
+                        proposal={question.proposal}
+                        text={question.text}
+                        handleQuestionChange={handleQuestionChange}
+                        handleRemove={removeQuestion}
+                        />
+                    ))}
+                </div>
+                <button type="button" onClick={addQuestion}>
+                    <img src={plus} alt="Adicionar-pergunta" />
+                </button>
+            </form>
+        </>
     );
 }
 
