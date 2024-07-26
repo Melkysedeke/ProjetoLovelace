@@ -1,6 +1,7 @@
 // components/AccessActivity.jsx
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import styles from './AccessActivity.module.css'
 
 function AccessActivity() {
     const { id } = useParams();

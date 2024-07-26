@@ -1,13 +1,12 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import InputForm from './InputForm';
 import TextArea from './TextArea'
 import QuestionBox from '../questions/QuestionBox';
 import SubmitButton from './SubmitButton';
 import BackButton from '../layout/BackButton';
 import styles from './FormActivity.module.css';
-import plus from '../../assets/plus.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCirclePlus } from '@fortawesome/free-solid-svg-icons'
 
 function generateAccessCode(length = 8) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -23,7 +22,7 @@ function FormActivity({ handleSubmit }) {
     const [activities, setActivities] = useState({
         name: "",
         description: "",
-        accessCode: generateAccessCode(), // Generate access code when activity is created
+        accessCode: generateAccessCode(),
         questions: []
     });
 
@@ -72,7 +71,7 @@ function FormActivity({ handleSubmit }) {
             <form className={styles.form} onSubmit={submit}>
                 <header className={styles.top}>
                     <nav>
-                    <BackButton/>
+                        <BackButton/>
                         <h1>Criar Sala</h1>
                         <SubmitButton text="Salvar" />
                     </nav>
@@ -105,8 +104,8 @@ function FormActivity({ handleSubmit }) {
                         />
                     ))}
                 </div>
-                <button type="button" onClick={addQuestion}>
-                    <img src={plus} alt="Adicionar-pergunta" />
+                <button className={styles.plus} type="button" onClick={addQuestion}>
+                    <FontAwesomeIcon className={styles.plus_svg} icon={faCirclePlus} />
                 </button>
             </form>
         </>

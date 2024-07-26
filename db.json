@@ -1,6 +1,23 @@
 {
-  "users": [
-  ],
+  "users": [],
   "activities": [
+    {
+      "id": "05fd",
+      "name": "Testando novamente a criação de uma sala de maneira aleatória",
+      "description": "Bom, nesta parte se trata de um breve descrição sobre a sala, caso queira não há a necessidade botar algo muito bonito ou sofisticado, apenas do que se trata ou talvez a sala e turmo que está sendo realizado.",
+      "accessCode": "PbCyn6d8",
+      "questions": [
+        {
+          "id": 1722007733127,
+          "proposal": "Temos aqui um local para poder escrever a proposta do que será feito com o texto abaixo (ao menos, no momento é esta a ideia)",
+          "text": "Aqui não tem muito o que ser feito, basta você adicionar um texto ao seu bel prazer para que terceiros/discentes possam interpretá-lo e responder de acordo com o pedido na proposta/pergunta acima.\n\nNão há limite quanto a organização do texto no momento e ainda se trata de algo simplificado, como podemos ver ele não disponibiliza uma formatação mais ampla como adição de negrito, itálico, aumentar ou diminuir a fonte.\n\nNeste parágrafo estarei testando a inserção de um link aleatório para verificar o comportamento do mesmo: https://youtu.be/kqFoDihKLb8?si=v7fdmjwb2kFe0jN7\n\nNo mais, para evitar desgaste, não irei acrescentar mais nenhuma informação."
+        },
+        {
+          "id": 1722008056662,
+          "proposal": "Aqui será apenas mais uma paergunta para poder fazer a verificação em relação ao CSS da tela posterior após salvar a sala.",
+          "text": "Por incressa que parível, na próxima tela eu estava com alguns problemas com envelopamento do texto em relação a caixa de conteúdo ao qual ela se encontrava, resumindo: o conteúdo da caixa filho estava estourando o tamanho da caixa pai, algo que não deveria estar acontecendo."
+        }
+      ]
+    }
   ]
 }

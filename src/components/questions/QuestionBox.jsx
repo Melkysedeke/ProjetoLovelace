@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import InputForm from '../formActivity/InputForm';
 import TextArea from '../formActivity/TextArea';
 import trash from '../../assets/trash.svg'
 import styles from './QuestionBox.module.css'
