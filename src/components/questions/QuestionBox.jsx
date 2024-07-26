@@ -20,10 +20,9 @@ function QuestionBox({ id, proposal, text, handleQuestionChange, handleRemove })
 
     return (
         <div className={styles.question_box}>
-            <InputForm
-                type="text"
-                name="proposal"
-                placeholder="Proposta/Pergunta"
+             <TextArea
+                name="question"
+                placeholder="Proposta"
                 value={proposal}
                 handleOnChange={handleProposalChange}
                 required={true}

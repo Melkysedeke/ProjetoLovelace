@@ -16,17 +16,6 @@
     transition: .5s;
 }
 
-.question_box input {
-    font-size: 16px;
-    border-bottom: 1px solid #8e8e8e;
-}
-
-.question_box input:focus {
-    outline: none;
-    border-bottom:1px solid #F21B3F;
-    transition: ease .2s;
-}
-
 .question_box textarea {
     padding: 10px;
     font-size: 12px;
@@ -38,6 +27,11 @@
     outline: none;
     border-bottom:1px solid #F21B3F;
     transition: ease .2s;
+}
+
+.question_box textarea[name="question"] {
+    font-size: 16px;
+    border-bottom: 1px solid #8e8e8e;
 }
 
 .trash {

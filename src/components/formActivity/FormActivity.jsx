@@ -69,19 +69,18 @@ function FormActivity({ handleSubmit }) {
 
     return (
         <>
-            <header className={styles.top}>
-                <nav>
-                <BackButton/>
-                    <h1>Criar Sala</h1>
-                    <SubmitButton text="Salvar" />
-                </nav>
-            </header>
             <form className={styles.form} onSubmit={submit}>
+                <header className={styles.top}>
+                    <nav>
+                    <BackButton/>
+                        <h1>Criar Sala</h1>
+                        <SubmitButton text="Salvar" />
+                    </nav>
+                </header>
                 <div className={styles.header}>
-                    <InputForm
-                        type="text"
+                <TextArea
                         name="name"
-                        placeholder="Nome da Sala"
+                        placeholder="Nome da sala"
                         value={activities.name}
                         handleOnChange={handleChange}
                         required="required"

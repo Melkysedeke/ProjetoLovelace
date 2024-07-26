@@ -1,0 +1,75 @@
+.card {
+    max-width: 700px;
+    padding: 30px;
+    margin: 30px auto;
+    border: 1px solid #8E8E8E;
+    border-radius: 8px;
+}
+
+.card h1 {
+    background-color: #F21B3F;
+    border-radius: 8px;
+    padding: 10px;
+    color: #fff;
+    text-wrap: wrap;
+}
+
+.card h2 {
+    margin: 20px 0;
+}
+
+.card ul {
+    list-style: none;
+    padding: 20px 0;
+    border-top: 1px solid #8E8E8E;
+}
+
+.card li {
+    margin-bottom: 40px;
+}
+
+.card strong {
+    font-size: 24px;
+}
+.card p {
+    margin-top: 10px;
+}
+
+.code_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: #F21B3F;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+.code_text, .copyButton {
+    transform: translateX(50px);
+}
+
+.code_text h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.code_text h4 {
+    font-size: 20px;
+    color: #FFD151;
+}
+
+.copyButton {
+    margin-top: 10px;
+    padding: 10px 10px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.copyButton:hover {
+    background-color: #8E8E8E;
+}
