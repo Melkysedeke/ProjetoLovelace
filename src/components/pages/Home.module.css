@@ -4,16 +4,21 @@
 }
 
 .menu {
-    max-height: 300px;
-    max-width: 300px;
+    max-height: 200px;
+    max-width: 200px;
     margin: auto;
     transform: translateY(20%);
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
+}
+
+.menu h1 {
+    font-size: 24px;
 }
 
 img {
-    width: 100%;
+    width: 160px;
+    margin: auto;
 }
