@@ -2,8 +2,9 @@ import { useState } from "react";
 import InputForm from "../formActivity/InputForm";
 import SubmitButton from "../formActivity/SubmitButton";
 import LinkButton from "../layout/LinkButton";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import BackButton from "../layout/BackButton";
+import styles from './Register.module.css'
 
 function Register() {
     const [nameUser, setNameUser] = useState("");
@@ -69,17 +70,19 @@ function Register() {
     }
 
     return (
-        <div>
+        <div className={styles.container}>
             <BackButton/>
-            <h2>Cadastro de Usuário</h2>
-            <form onSubmit={cadastrarConta}>
-                <InputForm name="Name" placeholder="Nome" type="text" required={true} handleOnChange={handleNameChange} />
-                <InputForm name="Email" placeholder="E-mail" type="email" required={true} handleOnChange={handleEmailChange} />
-                <InputForm name="Password" placeholder="Senha" type="password" required={true} handleOnChange={handlePasswordChange} />
-                <InputForm name="ConfirmPassword" placeholder="Confirmar Senha" type="password" required={true} handleOnChange={handleConfirmPasswordChange} />
+            <form className={styles.card} onSubmit={cadastrarConta}>
+                <h1>Cadastro de Usuário</h1>
+                <div className={styles.inputs}>
+                    <InputForm name="Name" placeholder="Nome" type="text" required={true} handleOnChange={handleNameChange} />
+                    <InputForm name="Email" placeholder="E-mail" type="email" required={true} handleOnChange={handleEmailChange} />
+                    <InputForm name="Password" placeholder="Senha" type="password" required={true} handleOnChange={handlePasswordChange} />
+                    <InputForm name="ConfirmPassword" placeholder="Confirmar Senha" type="password" required={true} handleOnChange={handleConfirmPasswordChange} />
+                    <SubmitButton text="Cadastrar" />
+                </div>
                 {error && <p style={{ color: 'red' }}>{error}</p>}
-                <SubmitButton text="Cadastrar" />
-                <p>Já tem uma conta? <LinkButton text="Login" to="/Login"/></p>
+                <p>Já tem uma conta? <Link className={styles.link} to="/login">Login</Link></p>
             </form>
         </div>
     );

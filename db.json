@@ -1,5 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "id": "6845",
+      "name": "Testando",
+      "email": "testandoEmail@gmail.com",
+      "password": "123"
+    }
+  ],
   "activities": [
     {
       "id": "05fd",
