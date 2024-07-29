@@ -35,7 +35,7 @@ function AccessCode() {
                         name="code"
                         placeholder="Código de Acesso"
                         value={accessCode}
-                        onChange={(e) => setAccessCode(e.target.value)}
+                        handleOnChange={(e) => setAccessCode(e.target.value)}
                     />
                     <SubmitButton text="Acessar"/>
                 </form>

@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import styles from './Activity.module.css';
-import copy from '../../assets/content_copy.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCopy } from '@fortawesome/free-solid-svg-icons';
 
 function Activity() {
     const { id } = useParams();
@@ -26,26 +27,31 @@ function Activity() {
     }
 
     return (
-        <div className={styles.card}> 
-            <h1>{activity.name}</h1>
-            <h2>{activity.description}</h2>
-            <ul>
-                {activity.questions.map((question) => (
-                    <li key={question.id}>
-                        <pre>{question.text}</pre>
-                    </li>
-                ))}
-            </ul>
-            <div className={styles.code_box}>
-                <div className={styles.code_text}>
-                    <h3>Código de Acesso</h3>
-                    <h4 id='codigo'>{activity.accessCode}</h4>
-                </div>
-                <button onClick={copiarCodigo} className={styles.copyButton}>
-                    <img src={copy} alt="" />
-                </button>
+        <>
+            <div className={styles.return_box}>
+                <Link className={styles.return} to='/'>Voltar</Link>
             </div>
-        </div>
+            <div className={styles.card}> 
+                <h1>{activity.name}</h1>
+                <h2>{activity.description}</h2>
+                <ul>
+                    {activity.questions.map((question) => (
+                        <li key={question.id}>
+                            <pre>{question.text}</pre>
+                        </li>
+                    ))}
+                </ul>
+                <div className={styles.code_box}>
+                    <div className={styles.code_text}>
+                        <h3>Código de Acesso</h3>
+                        <h4 id='codigo'>{activity.accessCode}</h4>
+                    </div>
+                    <button onClick={copiarCodigo} className={styles.copyButton}>
+                        <FontAwesomeIcon className={styles.copy} icon={faCopy} />
+                    </button>
+                </div>
+            </div>
+        </>
     );
 }
 
