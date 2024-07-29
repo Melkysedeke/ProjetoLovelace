@@ -1,4 +1,10 @@
+.container {
+    height: 100%;
+    width: 100%;
+}
+
 .access_box {
+    margin: calc(10%) auto;
     width: 300px;
     height: 300px;
     border: 1px solid #8e8e8e;
@@ -14,4 +20,14 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+input[name="code"]{
+    border-bottom: 1px solid #8E8E8E;
+    outline: none;
+}
+
+input[name="code"]:focus{
+    border-bottom: 1px solid #F21B3F;
+    transition: .3s;
 }

@@ -32,8 +32,7 @@ function Activity() {
             <ul>
                 {activity.questions.map((question) => (
                     <li key={question.id}>
-                        <strong>{question.proposal}</strong>
-                        <p>{question.text}</p>
+                        <pre>{question.text}</pre>
                     </li>
                 ))}
             </ul>

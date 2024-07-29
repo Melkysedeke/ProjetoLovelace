@@ -8,7 +8,7 @@ function TextArea({ name, placeholder, value, handleOnChange, required }) {
     function autoResize() {
         const textarea = textareaRef.current;
         textarea.style.height = 'auto'; // Redefine a altura para calcular a nova altura correta
-        const maxHeight = 5 * 24; // Assume 20px de altura por linha, ajustável conforme o necessário
+        const maxHeight = 1000 * 10; // Assume 20px de altura por linha, ajustável conforme o necessário
         if (textarea.scrollHeight > maxHeight) {
             textarea.style.height = maxHeight + 'px';
             textarea.style.overflowY = 'auto'; // Mostra a barra de rolagem vertical se a altura máxima for atingida

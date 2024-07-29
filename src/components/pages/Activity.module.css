@@ -1,5 +1,5 @@
 .card {
-    max-width: 700px;
+    max-width: 600px;
     padding: 30px;
     margin: 30px auto;
     border: 1px solid #8E8E8E;
@@ -12,10 +12,12 @@
     padding: 10px;
     color: #fff;
     text-wrap: wrap;
+    font-size: 24px;
 }
 
 .card h2 {
-    margin: 20px 0;
+    margin: 10px 0;
+    font-size: 16px;
 }
 
 .card ul {
@@ -25,14 +27,14 @@
 }
 
 .card li {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #8E8E8E;
+    padding-bottom: 10px;
 }
-
-.card strong {
-    font-size: 24px;
-}
-.card p {
+.card pre {
     margin-top: 10px;
+    text-wrap: wrap;
+    font-size: 12px;
 }
 
 .code_box {

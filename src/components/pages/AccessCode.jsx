@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import SubmitButton from '../formActivity/SubmitButton'
 import BackButton from '../layout/BackButton';
-import styles from './AccesCode.module.css'
+import InputForm from '../formActivity/InputForm'
+import styles from './AccessCode.module.css'
 
 function AccessCode() {
     const [accessCode, setAccessCode] = useState('');
@@ -24,13 +25,14 @@ function AccessCode() {
     };
 
     return (
-        <>
+        <div className={styles.container}>
             <BackButton/>
             <div className={styles.access_box}>
                 <h1>Acessar Atividade</h1>
                 <form onSubmit={handleSubmit}>
-                    <input
+                    <InputForm
                         type="text"
+                        name="code"
                         placeholder="Código de Acesso"
                         value={accessCode}
                         onChange={(e) => setAccessCode(e.target.value)}
@@ -38,7 +40,7 @@ function AccessCode() {
                     <SubmitButton text="Acessar"/>
                 </form>
             </div>
-        </>
+        </div>
     );
 }
 

@@ -70,7 +70,7 @@ function FormActivity({ handleSubmit }) {
         <>
             <form className={styles.form} onSubmit={submit}>
                 <header className={styles.top}>
-                    <nav>
+                    <nav className={styles.intern_top}>
                         <BackButton/>
                         <h1>Criar Sala</h1>
                         <SubmitButton text="Salvar" />

@@ -1,7 +1,8 @@
-// components/AccessActivity.jsx
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './AccessActivity.module.css'
+import TextArea from '../formActivity/TextArea'
+import SubmitButton from '../formActivity/SubmitButton';
 
 function AccessActivity() {
     const { id } = useParams();
@@ -13,7 +14,6 @@ function AccessActivity() {
             .then((response) => response.json())
             .then((data) => {
                 setActivity(data);
-                // Inicializar as respostas com as perguntas da atividade
                 setResponses(data.questions.map(question => ({
                     id: question.id,
                     text: ''
@@ -43,21 +43,25 @@ function AccessActivity() {
     }
 
     return (
-        <div>
-            <h1>{activity.name}</h1>
-            <p>{activity.description}</p>
+        <div className={styles.card}>
+            <div className={styles.header}>
+                <h1>{activity.name}</h1>
+                <p>{activity.description}</p>
+            </div>
             <form onSubmit={submitResponses}>
                 {activity.questions.map((question) => (
-                    <div key={question.id}>
-                        <strong>{question.proposal}</strong>
-                        <p>{question.text}</p>
-                        <textarea
+                    <div key={question.id} className={styles.question}>
+                        <pre className={styles.question_text}>{question.text}</pre>
+                        <TextArea className={styles.question_answer}
+                            name="answer"
+                            placeholder="Resposta"
                             value={responses.find(response => response.id === question.id)?.text || ''}
-                            onChange={(e) => handleResponseChange(question.id, e.target.value)}
+                            handleOnChange={(e) => handleResponseChange(question.id, e.target.value)}
+                            required="required"
                         />
                     </div>
                 ))}
-                <button type="submit">Enviar Respostas</button>
+                <SubmitButton text="Enviar Respostas" />
             </form>
         </div>
     );
